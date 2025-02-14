@@ -65,7 +65,9 @@ A wireless IoT system for monitoring environmental conditions (temperature, humi
    HC-SR04:
      Trig     -> GPIO15
      Echo     -> GPIO18
+   
    Buzzer     -> GPIO19
+   
    Button     -> GPIO13 (pull-up)
    
    RGB LED:
