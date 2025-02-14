@@ -61,21 +61,23 @@ A wireless IoT system for monitoring environmental conditions (temperature, humi
    **Sensor Node**
    
    DHT11      -> GPIO17
+   
    HC-SR04:
      Trig     -> GPIO15
      Echo     -> GPIO18
    Buzzer     -> GPIO19
    Button     -> GPIO13 (pull-up)
+   
    RGB LED:
      Red      -> GPIO14
      Green    -> GPIO12
      Blue     -> GPIO27
+   
    MQ-135     -> GPIO35
 
 
  **Display Unit**
 
-Copy
 TFT_CS     -> GPIO5
 TFT_RST    -> GPIO4
 TFT_DC     -> GPIO16
