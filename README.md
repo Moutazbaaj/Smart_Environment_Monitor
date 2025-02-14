@@ -5,7 +5,7 @@ A wireless IoT system for monitoring environmental conditions (temperature, humi
 
 <table>
   <tr>
-    <td><img src="IMG/IMG_7672jpeg" width="250"></td>
+    <td><img src="IMG/IMG_7672.jpeg" width="250"></td>
     <td><img src="IMG/IMG_7670.jpeg" width="250"></td>
     <td><img src="IMG/IMG_7669.jpeg" width="250"></td>
   </tr>
