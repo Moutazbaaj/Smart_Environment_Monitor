@@ -3,6 +3,13 @@
 A wireless IoT system for monitoring environmental conditions (temperature, humidity, CO2) and water tank levels using ESP32 microcontrollers with ESP-NOW communication.
 
 
+<table>
+  <tr>
+    <td><img src="IMG/IMG_7672jpeg" width="250"></td>
+    <td><img src="IMG/IMG_7670.jpeg" width="250"></td>
+    <td><img src="IMG/IMG_7669.jpeg" width="250"></td>
+  </tr>
+</table>
 
 
 ## Features
