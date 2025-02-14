@@ -2,6 +2,9 @@
 
 A wireless IoT system for monitoring environmental conditions (temperature, humidity, CO2) and water tank levels using ESP32 microcontrollers with ESP-NOW communication.
 
+
+
+
 ## Features
 - **Sensor Node (Transmitter)**
   - DHT11 temperature/humidity sensor
@@ -49,7 +52,7 @@ A wireless IoT system for monitoring environmental conditions (temperature, humi
 2. **Hardware Connections**
 
    **Sensor Node**
-   ```plaintext
+   
    DHT11      -> GPIO17
    HC-SR04:
      Trig     -> GPIO15
@@ -61,3 +64,78 @@ A wireless IoT system for monitoring environmental conditions (temperature, humi
      Green    -> GPIO12
      Blue     -> GPIO27
    MQ-135     -> GPIO35
+
+
+ **Display Unit**
+
+Copy
+TFT_CS     -> GPIO5
+TFT_RST    -> GPIO4
+TFT_DC     -> GPIO16
+TFT_MOSI   -> GPIO23
+TFT_CLK    -> GPIO18
+
+
+Configuration
+
+ESP-NOW Setup
+Update MAC addresses in both sketches:
+
+// Transmitter code (replace with receiver MAC)
+uint8_t receiverMacAddress[] = {0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};
+
+// Receiver code (replace with transmitter MAC)
+uint8_t expectedMac[] = {0x80,0x7D,0x3A,0xF8,0x1A,0x24};
+
+
+
+Calibration
+
+Initial calibration on first boot:
+Hold button for 3 seconds
+System measures empty tank distance
+RGB LED confirms calibration
+Usage
+
+Sensor Node
+Automatically sends data every 500ms
+Button press for recalibration
+Visual alerts:
+White: Normal operation
+Blinking blue: Calibration needed
+Blinking red: Warning condition
+Display Unit
+Shows real-time sensor data
+Warning displays for:
+Tank overflow/empty
+Critical CO2 levels
+Connection status monitoring
+
+Customization
+
+Adjust thresholds in waterTankStatus()
+Modify update intervals:
+const unsigned long updateInterval = 500;  // Transmitter
+const unsigned long displayTimeout = 5000; // Receiver
+Enhance MQ-135 calibration (current implementation uses simple linear conversion)
+Troubleshooting
+
+Ensure MAC addresses match between devices
+Check sensor wiring connections
+Monitor serial output (115200 baud)
+Reset both devices if connection drops
+
+Note: This system requires line-of-sight between ESP32 devices for reliable ESP-NOW communication (range up to 200m in open space).
+
+
+______________________________
+
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+______________________________
+
+
+
