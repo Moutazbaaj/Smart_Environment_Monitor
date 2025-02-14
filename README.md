@@ -81,9 +81,13 @@ A wireless IoT system for monitoring environmental conditions (temperature, humi
  **Display Unit**
 
 TFT_CS     -> GPIO5
+
 TFT_RST    -> GPIO4
+
 TFT_DC     -> GPIO16
+
 TFT_MOSI   -> GPIO23
+
 TFT_CLK    -> GPIO18
 
 
