@@ -83,7 +83,7 @@ TFT_MOSI   -> GPIO23
 TFT_CLK    -> GPIO18
 
 
-Configuration
+## Configuration
 
 ESP-NOW Setup
 Update MAC addresses in both sketches:
@@ -96,7 +96,7 @@ uint8_t expectedMac[] = {0x80,0x7D,0x3A,0xF8,0x1A,0x24};
 
 
 
-Calibration
+## Calibration
 
 Initial calibration on first boot:
 Hold button for 3 seconds
@@ -104,7 +104,7 @@ System measures empty tank distance
 RGB LED confirms calibration
 Usage
 
-Sensor Node
+**Sensor Node**
 Automatically sends data every 500ms
 Button press for recalibration
 Visual alerts:
@@ -118,7 +118,7 @@ Tank overflow/empty
 Critical CO2 levels
 Connection status monitoring
 
-Customization
+## Customization
 
 Adjust thresholds in waterTankStatus()
 Modify update intervals:
